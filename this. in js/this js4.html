@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>use of this. in function</title>
+</head>
+<body>
+      <script>
+          function exp(){
+            console.log(this); // ii only give window object in browser
+            let x='checking';
+            console.log(this.x);  //in this function 'this' not work it give 'undefined' output, it work in object'{}'
+          }
+          exp();
+
+           let exp1=()=>{
+            console.log(this); //in arrow function it work like same as normal function
+           }
+           exp1();
+             
+           let exp2=()=>{
+            let dfd='dfdfdsf';
+            console.log(this.dfd); //in arrow,again work as same ,but it work in differnt in differnt console
+           }       //like node.js console it give empty {}
+           exp2();
+      </script>
+</body>
+</html>

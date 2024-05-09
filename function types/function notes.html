@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More details about Function</title>
+</head>
+<body>
+      <h3>Check Console</h3>
+    <script>
+            function myfun11(x,y) {     //function is group of code with diff. parameters
+        let z=x+y;           
+                console.log('the new value is',z);
+            }
+            myfun11();    //change of parameters value it is dynamic
+            myfun11(33,44.5);
+            myfun11(11,33);
+
+                console.log('change');
+            function myfun111(y1,x1) {   //parameters value is set with position of variable not the name of variable
+        let z1=x1+y1;
+                console.log(x1);     //thats why here x1 is consider as b, and y1 as a
+                console.log(y1);   
+
+                console.log('the new value is',z1);
+                
+            }
+        let a=34;
+        let b=12;
+            myfun111(a,b);
+
+                console.log('change');
+            function myfun1111(x2,y2) {
+        let z2=x2+y2;
+                return z2;          //it is only use in function ,it is for to stop execution of function
+                console.log(' value is',z2);   //this is not print becouse of 'return statment'.
+            }
+        let x2=55;
+        let y2=11;
+                console.log( myfun1111(x2,y2));  //the console use in fun for call function becouse of return statment 
+
+                console.log('change');
+        let p=22;
+            function pvalue() { p=44;}   //in function when we re-asingn value of varible it working as below
+                console.log(p); //first it give its original value when we call the varible
+            pvalue();  //next when we call the functio where re-asingn value is stored. it no give any output
+                console.log(p) //but in second time we call the same variable it give re-asingn value from function
+    </script>
+</body>
+</html>

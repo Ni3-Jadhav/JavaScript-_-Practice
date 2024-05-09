@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class-Constructor</title>
+</head>
+<body>
+     <script>
+        class product{
+            constructor(pname, pvalue){ //in constructor we put parameter 
+                console.log("The constructor is the initilizer in class for object") //when we crete new class for object
+                              // it find the constructor, or when there is no constructor creteed ,it always create for object
+                this.ProductName=pname;
+                this.ProductValue=pvalue;      
+            };
+            productinfo(){
+                console.log(`Your choice is great, with buying these product`);
+            };
+        };
+          
+        let product1= new product('smartphone',9999);  //we pass constructor parameter here
+        product1.categery="Electronics";
+        let product2= new product(); // it give  undefined
+        product2.ProductName="mobilecpver"; // by these we pass value ,becouse objects value can change
+     </script>
+</body>
+</html>

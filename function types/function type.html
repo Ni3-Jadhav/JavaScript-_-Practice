@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function types</title>
+</head>
+<body>
+       <script>
+          //function is nothing but the set of action is performe in block codes {}
+            function exp1(x,y){   //normal function with parameters 
+                return x+y;       //'return' key for value return 
+            }
+            document.write(exp1(22,33),'<br>');  //pass parameter value for execution
+   
+               let a=44;
+               let b=55;
+            function exp2(){  //with no parameters,call action from globle  
+                let z=b-a;  // action performe
+                document.write(z,'<br>');
+            }   
+            exp2(); //permorme the ction by caling function only.
+            exp2();
+            exp2();  // call a function as we want
+
+         //In ES6 version, we use function in short form like arrow function is introduce with new feactures '()=>{}'  
+           let exp3=(d,c)=>{  // here, the writing method is changeg, it give shrtcut way to write function
+            return c-d;
+           }  
+             document.write(exp3(7,22),'<br>'); //it same work as normal
+         //use of arrow function
+            setTimeout(()=>{   //it is use in predefined functions like -pop(),forEach(),map(),etc...
+                console.log('The SetTimeout function is executed after 4sec.');
+            },4000);
+             
+             document.write('Other output check in console <br>');
+         //it make lot of shortcuts 
+           let exp4= (p,q)=>p*q;  //no use of '() and {}',check console.
+           let exp5=k=>k+55;  // for single parametr ,no need of().
+           let exp6=()=> document.write(' <h4> when there is no parameter,alway use() ,never do these =>only. </h4>  <br>');  
+                
+       </script>
+</body>
+</html>

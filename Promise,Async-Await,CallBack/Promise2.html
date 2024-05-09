@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise chaning Catch exp</title>
+</head>
+<body>
+    <!-- the code not run properly ,there is defect in  it -->
+    <script>
+           let expfun1=((username)=>{
+               return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                //    let  user=10;
+                //     if(user==100 ){
+                  
+                        resolve("These is Details Of",username);
+                    // }else{
+                    //     reject("Something Went Wrong...");
+                    // }
+                },2000);
+               });
+           });
+
+           let expfun2=((email)=>{
+               return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    let email=true;
+                    if(this.email!=""){
+                        
+                        resolve("With Eamil Id",email);
+                    }else{
+                        reject(" Ye Sab Galat Hai...!")
+                    };
+                },2000);
+               });
+           });
+
+           expfun1("Rocky Bhai")
+           .then((result)=>{
+            return expfun2("rokii@gmail.com");
+           })
+           .catch((errr)=>{
+            console.log(errr);
+           })
+           .then((result)=>{
+            return expfun1("Animal");
+           })
+           .catch((errr)=>{
+            console.log(errr);
+           })
+           .then((result)=>{
+            return expfun2("animal@gmail.com");
+           })
+           .catch((errr)=>{
+            console.log(errr);
+           })
+           .finally(()=>{
+            console.log("Bas Yahi Tak Tha...!")
+        })
+
+        
+       
+    </script>
+</body>
+</html>

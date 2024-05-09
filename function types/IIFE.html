@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immediately Invoke Function Expression</title>
+</head>
+<body>
+    <script>
+    /*
+        It is a JavaScript design pattern where a function is defined and executed immediately after 
+        its creation. This pattern is often used to create a private scope for variables and avoid polluting 
+        the global scope.
+        IFE is useful for encapsulating code and preventing variable name conflicts in the global scope.
+         It's commonly used in scenarios where you want to create a block of code that doesn't leave behind any 
+         variables in the global scope.
+    */
+
+         let fun1=(()=>{
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    console.log("These is the  Immediately Invoke Function Expression (IIFE)");
+                    resolve("Success")
+                },2000);
+            });
+        });
+         (async ()=>{
+            await fun1();   //these only execate once at that point
+        })();
+    </script>
+</body>
+</html>

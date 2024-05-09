@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM events 'onchange'</title>
+</head>
+<body>
+    <input type="text" id="event7" onchange="changeevents()">
+     <div id="display"></div>
+     <input type="text" id="event77" onchange="changeevents1()">  
+       <script>
+         function changeevents(){
+            document.getElementById('event7').style.color='skyblue';
+         }
+         function changeevents1(){
+            document.getElementById('display').innerHTML=document.getElementById('event77').value;
+         }
+        //  the 'onchange'event occurs when the value is change ,it mainly use with '<input>' tag 
+        //  it is dynamically change on screen without reloading the page.
+       </script>
+</body>
+</html>

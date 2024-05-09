@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Class-Constructor</title>
+</head>
+<body>
+    <script>
+        //super is use for inheritance child constructor to parent  ,in these scenario the action flow is like
+        // first it inter in  child constructor and use of 'super' key it back to parent and again exit in child
+
+        class athletes{
+            constructor(name){  //consructor for initilize the class object,in these we also use parameter to pass value
+                this.Events="Olympics"; 
+            };
+            role(){
+                console.log('Represents India in Olympics');
+            };
+        };
+        
+        class Outdoor extends athletes{
+            constructor(name,type){  //any  class have there own constructor but ,when it inheristance in parent class
+                   // it takes parent class constructor, and  both have there separate constructor then it give error for
+                   // use derivative(child) class in constructor.
+                super(name); //for these we use 'super' keyword, it use for give any data or value to parent constructor
+                       // it passes  the parameter ,but the same parameter give to both constructor and also in 'super'  
+                this.PlayerName=name;
+                this.SportType=type;
+            }
+            advt(){
+                super.role(); //by these it called the method also in child class
+                console.log(this.PlayerName,"Is the Pride of India");
+            };
+        };
+
+        let Player= new Outdoor("Niraj Chopra",'Javelin throw');
+    </script>
+</body>
+</html>

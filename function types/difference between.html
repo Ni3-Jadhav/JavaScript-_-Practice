@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Differnce between normal and arrow function</title>
+</head>
+<body>
+      <script>
+         let objj1={
+             hello :'this is normal function',
+              arr:[ 'expp1','expp2','expp3','expp4','expp5'],
+              funexp(){   //normal function in normal function
+                this.arr.forEach(function d(exp){
+                    console.log(' use of-this,  in normal function  '+ exp); //in these scenario it work perfectly
+                })
+              }
+         }
+          objj1.funexp();
+
+           //we use again 'this' in function of function
+          let objj2={
+             hello1 :'this is normal function',
+              arr1:[ 'expp1','expp2','expp3','expp4','expp5'],
+              funexp1(){   //normal function in normal function
+                this.arr1.forEach(function d(exp1){
+                    console.log(' use of-this in this,  in normal function  '+ exp1+','+ this.hello1); 
+                    //it find the context in same function , and whenewer it no grt deatails it give undifined,it not search ,outside the fonction
+                      //we not use'this in this' in the normal 'function of function' it give undefined,it not take parent'this'.
+                })
+              }
+           }
+           objj2.funexp1();
+
+          //use  of 'this' in  arrow function
+            let objjarrow={
+               hello2 :'this is arrow function',
+               arr2:[ 'expp1','expp2','expp3','expp4','expp5'],
+               funexp2(){   //normal function in arrow '()=>{}' function
+                this.arr2.forEach((exp2)=>{
+                    console.log(' use of-this ,  in normal function  '+ exp2); //in these scenario it again, work perfectly
+                })
+               }
+           }
+           objjarrow.funexp2();
+
+         //now 'this in this'we use arrow function   
+           let objj1arrowfun={
+             hello3:'this is arrow function',
+              arr3:[ 'expp1','expp2','expp3','expp4','expp5'],
+              funexp3(){   //normal function in arrow function-this in this
+                this.arr3.forEach((exp3)=>{
+                    console.log(' use of-this in this,  in normal function  '+ exp3+',' +this.hello3); 
+                    //it find inside the function aobout ist context ad not get any details then it jump on outside and finout in parent object 
+                    // in arrow function 'this in this' is work perfectly, becose 'use of second this' it take it parents context
+                })
+              }
+         }
+            objj1arrowfun.funexp3();
+      </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsform</title>
+</head>
+<body>
+    <div>
+        <form action="abc.html" method="post">
+            <label>email id</label>
+            <input type="email" name="email1" id="email id">
+            <br>
+            <label>password</label>
+            <input type="password" name="pass1" id="pass">
+            <button type="submit" onclick="return button()"> register</button>
+        </form>
+    </div>
+    <script>
+        function button()
+        {
+            var email1=document.getElementById('email id').value;
+            var pass1=document.getElementById('pass').value;
+            if (email1==''){
+                console.log("plea emter id");
+                return false;
+            }else if(pass1==''){
+                console.log("enter password");
+                return false;
+            }else {
+                console.log("form is corect")
+            }
+              console.log(email1);
+              console.log(pass1);
+              return true;
+        }   
+    </script>
+</body>
+</html>

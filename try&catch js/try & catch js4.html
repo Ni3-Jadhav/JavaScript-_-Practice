@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throw</title>
+</head>
+<body>
+    <script>
+        try{
+         let a=10;
+         if(a==10){
+            document.write(a +"<br>");
+         }  
+           throw new TypeError (' <h4> hum nahi manenge...! </h4>');
+           document.write('ye kuch kam ka nahi hai')
+          
+        }catch(e){
+         document.write("Error Message "+e.message);
+          
+        }finally{
+            document.write(' <h4> ye bhi thik hai </h4>');
+        }
+   </script>
+        
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All about String</title>
+</head>
+<body>
+     <h2>Check Console</h2>
+     <script>
+        let a='  this is my first String string practice,string String method   '
+            console.log(a);
+            console.log(a.length);   //to count no of item(alphabates with space between letter).
+            console.log(a[0]);
+            console.log(a[2]);
+            console.log(a[5]);
+            console.log(a[6]);  //by this we get ,on which position which item ,letter space or alphabates is place 
+            console.log(a[7]);
+
+            console.log('change');
+        let char='WelCome';
+            console.log(char.charAt(5));  //it also work as position finding method like 'char[5]'. it find characters
+
+            console.log('change');
+        let char1='welcome%';
+            console.log(char.charCodeAt(5)); //it give the character code like binary form
+            console.log(char.charCodeAt(0)); //it give capital 'W' code, for each type characters code is differnt
+            console.log(char1.charCodeAt(0)); //code for smallcase 'w' is also differnt
+            console.log(char1.charCodeAt(7)); //each element has code for understandig to computer
+
+            console.log('change');
+            for(let i=0;i<a.length;i++){
+                console.log(a[i]);
+            }
+
+            console.log('change');
+            console.log(a.trim());  //it remove empty space from stating and ending
+            console.log(a.trim().length);  //it give the new length
+
+            console.log('change');
+            console.log(a.trimStart().length);  //it remove empty space from start
+            console.log(a.trimEnd().length);  //it remove space from ending
+
+            console.log('change');
+            console.log(a.replace('string','change'));  //by this we only replace the starting word,it is not case sencetive.
+            console.log(a.replace(/string/i ,'change'));  //so it is now case sencetive 
+
+            console.log('change');
+            console.log(a.replaceAll('string','change'));  // it replace all the same word 
+
+            console.log('change');
+            console.log(a.toUpperCase());  //to capitalize all letter in string
+            console.log(a.toLowerCase()); // all letter in smallcase.
+
+            console.log('change');
+        let newa='new line of Word string ';
+        let newal='foe join the differnt string';
+            console.log(a.concat('new line start', newa,newal))  //by this method we join the multiple string
+
+            console.log('change');
+        let newline= newa.split(/w/i);  //it split into an array of subdtring
+            console.log(newline);  //does not change original string
+
+            console.log('change');
+            console.log(newa.slice(5,11))  //here is two parameters(start,end) ,between this only get print 
+            //and it not change original string ,it is start from 0 index
+            console.log(newa.slice(5));
+            console.log(newa.slice(-5));
+            console.log(newa.slice(-15,-5));
+            console.log(newa.slice(13,5))  //in this it use less value 1st and remove 5 characters from starting
+                            //and then greter value from the end of 5 characters,it get 13 characters fro there
+
+            console.log('change');
+            console.log(newa.substring(5,11)); //it extract characters from start to end,it does not change original string
+            console.log(newa.substring(13,5));  //in this it take less value from string index and again greter value
+                // value is also start from 0 index.
+            console.log(newa.substring(-5));  //it only work from 0 index,
+            console.log(newa.substring(-15,-5)); 
+
+            console.log('change');
+            console.log(newa.substr(5,11)); // in this 1st parameters start with 0 index and 2nd is from the 
+                    //end of last characters of 1st parameters
+            console.log(newa.substr(13,5));  //in this no less or greter value,1st parameters always work on 1st
+            console.log(newa.substr(-5)); //in this it start from end.
+            console.log(newa.substr(-5,-15));
+
+            console.log('change');
+        let string1= `using backtic ,it is  eassy to use "double" and 'single' qoutes in string `;
+            console.log(string1);//this `` backtics for use in string which have '',"", in it
+
+            console.log('change');
+        let string2="Escape character's \"using\" backslash";
+            console.log(string2) //for using "" in string
+
+            console.log('change');
+        let multipleline=
+                        `this is the statement 
+                        which contains, multiple line
+                        of string, it write with use of
+                        "backtics". it is very helpfull `
+            console.log(multipleline); // for the multipleline of string use of "double"and 'single' qoutes
+                                // not work ,we need bachktics `` for execution
+     </script>
+</body>
+</html>

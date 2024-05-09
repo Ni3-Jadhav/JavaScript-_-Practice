@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this use in globle</title>
+</head>
+<body>
+    <script> 
+         // 'this' gives  refernce to the current context. 
+         // this. is nothing but the to refer the obeject in{}, but when it use in outside {} it get globly
+         // it has differnt value,depend on wher it use.
+        console.log(this); //it gives the window object browser
+            
+
+         //let use in normal function,
+           function forthis(x,y){
+               let z=x-y;
+               console.log('not usefull ',z);
+               console.log(this);
+
+           }
+           forthis(55,33); // again in normal function it give window object of browser, it is globl again.
+    </script>
+</body>
+</html>

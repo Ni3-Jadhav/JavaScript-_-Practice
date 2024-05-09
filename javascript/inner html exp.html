@@ -1,0 +1,29 @@
+<style>
+    .addmyclass{
+      border: 5px solid black;
+    }
+  </style>
+  <html>
+    
+    <div id="printmyname">Himanshu</div>
+    <span id="printmyname1" >Rajesh</span>
+  
+    <input type="button" value="Print Name" onclick="printName()">
+     <input type="button" value="change colour of  Name" onclick="changecolourName()">
+  </html>
+  <script>
+    function printName(){
+      var printmyname1 = document.getElementById("printmyname");
+          printmyname1.innerHTML = "Adesh";
+          printmyname1.setAttribute('class','addmyclass')
+        document.getElementById("printmyname1").innerHTML = "kamal";
+    
+      
+    }
+    function changecolourName(){
+      document.getElementById("printmyname").style.color = 'red'
+      document.getElementById("printmyname1").style.color = 'blue'
+       document.getElementById("printmyname").style.backgroundColor= 'yellow'
+    }
+    
+  </script>

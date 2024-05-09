@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Of Classes</title>
+</head>
+<body>
+     <script>
+        class SportPerson{  // Class is basically the template use for object, it means when we create a object with same
+                //propeties repetadly,then these class help us to make a same propertie use for differnt object
+            info(){
+                console.log("Plays for India");
+            };
+            moreref(){
+                console.log("Pride of Country"); //these are methods or function that is like template 
+            };
+            detais(pname,sname){    // it is simply like registrstion form xerox for all student which they fill 
+                this.PlayerName= pname;  //info and make it unique as object
+                this.SportName= sname; // by giving parameters it give each difernt value
+            };
+           
+        };
+        let player1= new SportPerson();  //in class for unique object we use vaiables and asingn in new class 
+        player1.detais('Virat Kholi',"Cricket")
+        let player2 = new SportPerson(); //alwaya asing with new key word and then class name
+        player2.detais("Sunil Chhetri","Football")
+     </script>
+</body>
+</html>

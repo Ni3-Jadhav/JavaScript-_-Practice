@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form  action="abc.html" method="post">
+        <label>Registration form </label><br>
+        <label>Email id</label>
+        <input type="text" name="emailid" id="emailid"><br>
+        <label>Password</label>
+        <input type="text" name="password" id="password1"><br>
+        <input type="submit" name="submit" value="Registration" onclick=" return displaydata()">
+    </form>
+    
+    <script>
+        function displaydata(){
+            
+            var emailid =  document.getElementById('emailid').value;
+            var password = document.getElementById('password1').value;
+            if(emailid == ''){
+                console.log("please enter your email id");
+                return false;
+            }else if(password== ''){
+                console.log("please enter your password");
+                return false;
+            }else{
+                console.log("form is correct");
+                
+            }
+            console.log(emailid);
+            console.log(password);
+            return true;
+           
+        }
+    </script>
+</body>
+</html>

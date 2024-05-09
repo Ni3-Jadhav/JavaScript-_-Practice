@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM events4 'onblur' </title>
+</head>
+<body>
+    <input type="text" id="events4" onfocus="event4onfocus()" onblur="event4onblur()"> 
+     <script>
+        function event4onfocus(){
+            document.getElementById('events4').style.backgroundColor='yellow';
+        }
+         function event4onblur(){
+            document.getElementById('events4').style.backgroundColor='purple';
+         }
+        //  'onblur' event is work along with 'onfocus ' event, it triggered when content losses focus, 
+        // for this we click outside the content
+     </script>
+</body>
+</html>

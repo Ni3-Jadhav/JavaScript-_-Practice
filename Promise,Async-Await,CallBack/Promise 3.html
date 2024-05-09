@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Chain Error Handling</title>
+</head>
+
+<body>
+    <script>
+
+        let shoping = ["Clothes", "Grocery", "Shoes", "Books"];   //suppose these data from API
+        let shopingItems = () => {    //for get data is valid or not
+            return true;
+        };
+        // let shopingPay = () => {
+        //     return false;   //not working
+        // };
+        let shopingItemsId = shoping[2];   //receive data details
+
+        let expfun1 = ((shoping) => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (!shopingItems(shoping)) {  //checking receive data
+                        let errrr = new Error("List of Shopping Item Empty or not Valid");
+                        reject(errrr);
+                    }
+                    if (shopingItemsId) {
+
+                        resolve(`Your Selected Product is,${shopingItemsId}...`);
+
+                    };
+                }, 2000);
+            });
+        });
+
+        let expfun2 = ((shopingItemsId) => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (!shopingItems(shoping) && shopingPay(shoping)) {
+                        let err = new Error("Something Went Wrong in Shopping List");
+                        reject(err);
+                    } else {
+
+                        resolve("Proceed To Payement");
+
+                    };
+                }, 2000)
+            });
+        });
+
+        expfun1(shoping)
+            .then((shopingItemsId) => {
+                console.log(shopingItemsId);
+                return shopingItemsId;
+            })
+            .catch((errr) => {
+                console.log(errr.message);
+            })
+            .then((shopingItemsId) => {
+                return expfun2(shopingItemsId);
+            })
+            .then((payInfo) => {
+                console.log(payInfo);
+            })
+            .catch((err) => {
+                console.log(err.message);
+            })
+            .finally(() => {
+                console.log("Thank You...!")
+            })
+    </script>
+</body>
+
+</html>

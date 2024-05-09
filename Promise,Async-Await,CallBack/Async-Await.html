@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Async-Await</title>
+</head>
+<body>
+    <script>
+        let firstfun=async  ()=>{ //these function become 'Promise' by just giving the async
+               let msg=await "Welcome"
+              console.log(msg)  //async always return the promise 
+        }
+        console.log("Hi...!");  //these execaute  first
+        firstfun();     //it execaute  last becouse of async-await
+        console.log("Bye...!");  //execaute second
+
+
+        let fun1=(()=>{
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    console.log("These is the Async-Await Function");
+                    resolve("Success")
+                },2000);
+            });
+        });
+
+        async function fun2 (){
+            await fun1();  //await pause the execution of async function until promise fullfilled
+        }
+        /*
+        async await is basiiclly for the the when we want to execaute some function first and later another
+        ist like ,fist check username ,if it is valid then check password
+        */
+    </script>
+</body>
+</html>

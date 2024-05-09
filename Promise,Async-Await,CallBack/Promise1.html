@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Chain</title>
+</head>
+
+<body>
+    <script>
+        let fun1 = ((user) => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log("The Player Name is", user);
+                    resolve("Getting Player Id....")
+                }, 2000);
+            });
+        });
+
+        let fun2 = ((id) => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log("With the ID", id);
+                    resolve("Getting Next Player details...")
+                }, 2000);
+            });
+        });
+
+        fun1("Virat")
+        .then((res) => {
+            console.log(res);
+        fun2("VK18")
+        .then((res) => {  //thes is the Promise chain,call function in which return new promise function is in it,
+            console.log(res);     //with ".then" we chaning
+        fun1("Rohit")
+        .then((res) => {
+            console.log(res);
+        fun2("45")  
+        .then((res) => {
+            console.log(res);
+                })
+            })
+        })
+        })
+
+    // we also do like these ,use of return ,in Promise Chain
+        fun1("Person1").then((result)=>{
+            return fun2("P1");
+        })
+        .then((result)=>{
+            return fun1("Person2"); 
+        })
+        .then((result)=>{
+            return fun2("P2");
+        })
+        .then((result)=>{
+            return fun1("Person3");
+        })
+        .then((result)=>{
+            return fun2("P3");
+        })
+        .then((result)=>{
+            console.log("All Done...")
+    }).finally(()=>{
+            console.log("Finally Complete..")
+    })
+   
+    
+    </script>
+</body>
+
+</html>

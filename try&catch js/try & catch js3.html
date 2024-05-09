@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throw and Finally</title>
+</head>
+<body>
+     <script>
+           try {
+              throw new Error( 'the error is from user side');  // this error is from user side 
+                   // 'new Error' is madadotry write for throw  functionality,TypeError,SyntaxError etc also use
+           } catch (b) {
+              document.write('Message give to error ' +b.message)
+           }finally{
+                document.write(' <h3> This line is aiways print ,wheather error occurs or not it is FINALLY </h3>');
+                   // it provides that final code should executed wheather the problem is resolve or not.
+           }
+     </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementByName</title>
+</head>
+<body>
+    <input type="text" name="user"><br>
+    <input type="text" name="user"><br>
+    <input type="text" name="user"><br>
+    <input type="text" name="user"><br>
+    <input type="text" name="user"><br>
+    <input type="text" name="user"><br>
+    <input type="text" name="user"><br>
+    <input type="text" name="user"><br>
+    <input type="text" name="user"><br>
+   <h1 id="name111"></h1>
+       <button type="button" onclick="namecount()">count</button>
+   <script>
+    function namecount(){
+       let n= document.getElementsByName('user');
+       n[3].style.backgroundColor='skyblue';
+       n[7].style.color='red';
+       document.getElementById('name111').style.color='green';
+       document.getElementById('name111').innerHTML='Total No of text box is '+n.length;
+    }
+   </script>
+</body>
+</html>

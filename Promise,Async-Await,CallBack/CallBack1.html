@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic CallBack</title>
+</head>
+
+<body>
+    <script>
+        /*
+             the callback function ,is the function in which we pass a parameter and call some other function in it,
+             or we also  new create function in function.
+        */
+        function info(name) {
+            console.log("These is the detail of", name);
+        };
+        function more(email) {          //these the simple example og call back function
+            console.log("with Eamil Id:", email);
+        };
+        more("OG@gmail.com", info("Oggy"))
+        /* here we call a function with argument and other function with there argument but notice that in these example
+        when we call fnction in function ,the "inner function" call's first and then the function that we call
+        */ 
+
+       let expfun1= ((name1, expfun2) => {  // in these example ,we pass parameter with other function, 
+            console.log("These is the second function datais of",name1);
+           expfun2(); //for calling the function that we pass in above function
+        });
+
+       let expfun3= (()=>{  //these function is calling in above function as argument
+            console.log("These is third function in CallBack");
+        });
+        expfun1("Brock Lesner",expfun3);  //for calling function in function as argument not write paranthesis() in function
+        // but rembember in thes case  it follow sequence function fist is call and then second.
+        
+        
+        let expfun4=((x,z,expfun5)=>{
+            console.log("These is the Fourth CallBack function example",x+z);
+            expfun5();  //these function is call in below function argument and create a new function in it
+        });
+
+        expfun4(3,5,()=>{  //here we pass argument and create function of argument
+            console.log("Here, we create function in function")
+        })
+
+        //CallBack is also in some Predifined function and asynchronous function like setTimeout
+
+        let expfun6=(()=>{
+            console.log("These is Example of CallBack in setTimeout");
+        });
+        setTimeout(expfun6,3000);  //predifined function in function is the exapmle of callback
+    </script>
+</body>
+
+</html>

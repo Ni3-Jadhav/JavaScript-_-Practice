@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuerySelectorAll 1</title>
+</head>
+<body>
+     <h3 class="query"> Use of QuerySelectorAll line 1</h3>
+     <h3  class="query"> Use of QuerySelectorAll line 2</h3>
+     <h3  class="query"> Use of QuerySelectorAll line 3</h3>
+     <h3  class="query"> Use of QuerySelectorAll line 4</h3>
+     <h3  class="query"> Use of QuerySelectorAll line 5</h3>
+     <h3  class="query"> Use of QuerySelectorAll line 6</h3>
+     <h3  class="query"> Use of QuerySelectorAll line 7</h3>
+         <script>
+            let a=document.querySelectorAll('.query');
+            // querySelectorAll is use for searching and return element in the html/css document. it is matching element
+            // it help to work on any element in the document ,it select multiple element in document. 
+             for  (let i=0;i<a.length;i++){
+                a[i].style.color='red';
+             }
+             a[3].style.backgroundColor='green';
+             a[5].style.color='grey';
+             a[5].innerHTML='QuerySelectorAll is use for specific searching or return';
+         </script>
+</body>
+</html>

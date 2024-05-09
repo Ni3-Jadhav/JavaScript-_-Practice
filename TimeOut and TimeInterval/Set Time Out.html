@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Timeout Basic</title>
+</head>
+
+<body>
+    <script>
+        /*
+           set timeout is the Asynchronus,it  doesn't pause the execution of the rest of your code. It schedules the provided 
+           function to be executed after the specified delay.
+           If you need to perform some action after the timeout, you can place that code inside the callback function.
+           setTimeout(callback, delay, arg1, arg2, ...); thes is the way of writting
+
+            callback: A function to be executed after the specified delay.
+            delay: The time (in milliseconds) to wait before executing the callback.
+            arg1, arg2, ...: Optional arguments that can be passed to the callback function.
+        */
+        setTimeout(() => {   //These is the simple Set Time Out
+            console.log("Welcome In Set Time Out Of 3sec.");
+        }, 3000) // with Delay Of 3 sec.
+
+        //ex..
+        let a = 6 + 4;
+        setTimeout(() => {
+            console.log("use of settimeout", a); //we put any action in code in the settimeout
+        }, 2000);
+
+        let fun1 = (() => {
+            console.log("These Function is execaute in the setTimeout function");
+        });
+        setTimeout(fun1, 1000);  //in these we put a function in settimeout
+
+        let fun2 = ((x, y, z) => {  //paremeter for passing argument in setTimeout 
+            console.log("We use put Parameter in function and pass argument in setTimeout,x-z+y:", x - z + y);
+        });
+        setTimeout(fun2, 4000, 33, 55, 77); //we pass multiple argument in setTimeout
+        /*
+            note that the actual time delay may be longer than the specified delay if the browser 
+            or environment is busy with other tasks.
+        */
+    </script>
+</body>
+
+</html>

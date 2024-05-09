@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="loading()">
+    <input type="text" onfocus="fors()" id="inp">
+    <h1 id="use">please press the button</h1>
+    <button id="buton" onclick="first()">Button</button>
+</body>
+</html>
+<script>
+   
+function first(){
+    const str="You are press button."
+    const data= document.getElementById("use")
+     data.innerHTML=str
+     data.style.color="blue"
+     document.getElementById("buton").style.display="none"
+    console.log("click")
+}
+function loading(){
+        alert("hey i am aleart")
+    }
+    function fors(){
+        document.getElementById("inp").style.backgroundColor="blue"
+    }
+</script>
+

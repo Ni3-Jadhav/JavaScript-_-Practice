@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM events 1st 'onclick'</title>
+</head>
+<style>
+    .addcss{
+       background-color: aquamarine;
+       padding: 10%;
+       display: inline-block;
+    }
+</style>
+<body>
+    <h3 id="events1" onclick="changecontent()">this heading is change on the click</h3>
+      <script>
+        function changecontent(){
+            document.getElementById('events1').innerHTML='This heading is change now';
+            document.getElementById('events1').setAttribute('class','addcss');
+        }
+        // onclick is work on the click on content, comanly use with <button >tag.
+      </script>
+</body>
+</html>

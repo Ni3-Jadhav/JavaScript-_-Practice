@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 1 add attribute</title>
+</head>
+ <style>
+   .myclass1{
+     font-size: larger;
+     font-family: 'Courier New', Courier, monospace;
+   }
+   .myclass11{
+     font-weight: bold;
+     font-size: 30px;
+     font-style: italic;
+   }
+ </style>
+<body>
+    <span id="first">name111</span>
+    <br>
+    <span id="second">name222</span>
+    <br>
+      <button onclick="colorchange()" name="colorchange">change color</button>
+      <button onclick="addcss()">add+css</button>
+     <script>
+        var name1=document.getElementById("first");
+        var name2=document.getElementById("second");
+       function colorchange(){
+        name1.style.color='blue';
+        name2.style.color='darkgreen';
+       
+       } 
+         function addcss(){
+          name1.setAttribute('class','myclass1');
+          name2.setAttribute('class','myclass11');
+         }
+      //  in above we use set attribute for add any atribute like class.
+     </script> 
+</body>
+</html>

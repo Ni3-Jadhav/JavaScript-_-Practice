@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt-ParseFloat</title>
+</head>
+<body>
+    <script>
+        function myfun(x,y) {
+        let z=x+y;
+        console.log('with promt',z);     //prompt value is dynamic which is given by user
+       }
+        let x=parseFloat(prompt('x var'));  //it consider float value,ex-value '3.5',it print '3.5' value as it is.
+        let y=parseFloat(prompt('y var'));
+        myfun(x,y);
+    </script>
+</body>
+</html>

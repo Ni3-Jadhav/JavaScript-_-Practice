@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Execaution Promise</title>
+</head>
+<body>
+    <script>
+            console.log("welcome, we see execaution of Promise");
+        let myPromise1= new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                console.log("we fetch some data from server,Task no 1 is Execauting");
+                resolve();
+                },3000)
+             });
+         
+             myPromise1.then(()=>{
+            console.log("Resolve the Problem");
+             });
+    
+        let myPromise2= new Promise((resolve,reject)=>{
+               setTimeout(()=>{
+                console.log('Task no 2 is Execauting');
+                resolve({userN:"Oggy",pass:"og@13"})  //we can pass value from these,like array ,object..
+               },3000);
+             });
+             
+             myPromise2.then((info)=>{
+                console.log(info)  //here the value is return
+             });  //the execation of mypromise1 and 2 is at same time, we settimeout of 3sec each,so not like 3+3 sec
+
+        let myPromise3 = new Promise((resolve,reject)=>{
+               setTimeout(()=>{
+                 let err=false;
+                 if(!err){
+                  console.log("Task no 3 is Execauting")
+                    resolve({username:"Jack", emai:"jack@gmail.com"});
+                 }else{
+                    reject("Error:kuch to Galat Hua!")  //Promise reject if error occurese
+                 };
+               },1000);  //it execaute first and later myPromise1 &2.
+             });
+             
+             myPromise3.then((user)=>{
+                console.log(user);
+                return user.username; //it return value next  in 'then'  ,but only when Promise resolve
+             }).then((username)=>{   //for access of object specific propertes
+                console.log(username);
+             }).catch((errr)=>{
+                console.log(errr);  //for catch the error
+             }).finally(()=>{
+               console.log('All Promise are Done, Either Resolve or Reject')
+            })
+             // the whole execaution of myPromise1,2&3 are complete is "3 sec" not take 3+3+1=7 sec by setTimeout Function
+            //   becouse of the "Promise is Asychronous".
+                           //   let myPromise4 = new Promise((success,Failed)=>{
+                           //          setTimeout(()=>{
+                           //             let err=false;
+                           //             if(!err){
+                           //                success({ username:"John Cena" ,id:"FU"});
+                           //             }else{
+                           //                Failed("Never Give UP!")
+                           //             };
+                           //          },4000);
+                           //       }) ;
+                                 
+                           //        try {
+                                 
+                           //          console.log(myPromise4)
+                           //        } catch (error) {
+                           //          console.log(error);
+                           //        }
+    </script>
+</body>
+</html>

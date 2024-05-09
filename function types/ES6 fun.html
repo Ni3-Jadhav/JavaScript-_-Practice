@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Different Featurers of ES6 function </title>
+</head>
+<body>
+      <h3>Check Console</h3>
+      <script>
+          let exp1=(x,y)=>{  //it is basic return functionality with '{}'.when we use '{}' we need write 'return' key word
+            return x*y;  //it is bassically explicit return
+          }
+          console.log(exp1(4,9));
+
+          let exp2=(x,y)=> x/y;  //we execute code without return or use of '{}' it is ES6 feature 
+          console.log(exp2(33,2));
+
+          let exp3=(x,y)=>(x+y); //when we use '() parenthises' again no need of return key word.
+          console.log(exp3(44,6));  //it is implicit return
+            
+          //for return in object
+          let exp4=()=>{ name:'object not return'; typp:'example'};  //in these scenario it doesn'n return ,it give undifined
+          console.log(exp4());
+
+          //for use of return value in object, we need to add parentheses (),and then inside we use'{}'
+          let exp5=()=>({ msg:'object will return', typ:'example of object return'});
+           console.log(exp5());
+              
+      </script>
+</body>
+</html>

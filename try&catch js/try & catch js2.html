@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try and Catch</title>
+</head>
+<body>
+       <script>
+          try{
+            document.write(' <h2> the error is occured and not run next line </h2>' +'<br>');
+            document.write(b);  //this is error 
+            document.write('this line not execute'); //this line is not execute but below all code is run
+          }catch(d){
+            document.write('Costome error message  display for user' + '<br>');  //this is message create by us to give the user  
+            document.write('Error Name '+d.name +'<br>');  //name is basically type of error.
+            document.write('Error Message' + d.message + '<br>'); //message is basically what is error
+            document.write('Error Details' + d.stack + "<br>"); //stack gives a whole information about error
+          }
+            
+             let a=4+4;
+             document.write(' next code of execution run  ',a);    //by the 'try and catch' this line get executed
+       </script>
+</body>
+</html>

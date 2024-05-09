@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions in String</title>
+</head>
+<body>
+     <script>
+        let str="hi Hello hello world hello";
+        console.log(str.indexOf('hello')); //it give index from hello-6
+        console.log(str.lastIndexOf('hello')) //it give index from last hello-18
+        console.log(str.indexOf( /hello/i)); //it make now case sencetive,and hello index start from -0
+        console.log(str.search('hello')); //it give the index of value, its like indexof function
+        console.log(str.search( /hello/i)); // same as index of
+        console.log(str.match('hello'));  //it give the all detail of value like index, where from its pick the value
+        console.log(str.match( /hello/g)) //it make globle and give all the same value 
+        console.log(Array.from(str.matchAll('hello')));  // match all is return the object ,that's why we use Array.from to return value
+        console.log(Array.from(str.matchAll(/hello/gi)));  // '/gi' gives all same value includin any case with globle and case sensitive
+        console.log(str.startsWith('hello')); // it use for the string or parragraph to check sarting value,here it start from hi so it give false
+        console.log(str.endsWith('hello')); //here it giv 'true' ,becuse at the end side value is hello, 'output always in booleen'
+        console.log(str.includes( 'hello')); //the output in boolean, it check wheather it present or not
+        console.log(str.includes('wlcome')); //it give false
+     </script>
+</body>
+</html>

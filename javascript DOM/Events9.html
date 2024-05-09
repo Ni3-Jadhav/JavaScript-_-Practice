@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM event'resize'</title>
+</head>
+<style>
+    
+    div{
+        height: 500px;
+        width: 1000px;
+        border: 1px solid red;
+      
+    }
+</style>
+<body onresize="resizeevent()">
+    <h1  id="event9" ></h1>
+    <div></div>
+    <script>
+        function resizeevent(){
+            let w=window.outerWidth;
+            let h=window.outerHeight;
+            let a='width'+w +",height"+h;
+            document.getElementById('event9').innerHTML=a;
+        }
+        // it is use for targeting element size, with ' hight and width'
+    </script>
+</body>
+</html>

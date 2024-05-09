@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example ,Employes Details</title>
+</head>
+<body>
+    <script>
+        let someData="These is Crucial Information about Company and it's Employees";
+        class office{
+            constructor(ename,eemail,eid,designation){
+                this.EmployesName=ename;
+                this.EmployesEmail=eemail;
+                this.EmployesId=eid;
+            };
+            work(){
+                console.log("I never Dreamt of success, I Worked for it");
+            };
+            imp(){
+                console.log("Important",someData);
+            };
+        };
+
+        class associate extends office{
+            constructor( ename,eemail,eid,designation){
+                super(ename,eemail,eid,designation);
+                this.Post=designation;
+            };
+        };
+
+        class Admin extends office{
+            constructor(ename,eemail,eid,){
+                super(ename,eemail,eid,);
+            };
+            edit(){
+                someData="I can edit Some Data of Company and Employees"
+            }
+        };
+
+         let Employes1= new associate("Oggy","og@gmail.com",'OGid',"time pass");
+         let Admin1= new Admin("jack","jack@gmail.com","jack5/2","nothing");
+    </script>
+</body>
+</html>

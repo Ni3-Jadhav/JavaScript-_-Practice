@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype in Objects</title>
+</head>
+<body>
+     <script>
+         let objj={
+            sector:"Engineering",
+            criteria(){
+                console.log("Student maintain attendance above 75%");
+            },
+         };
+         let std1={
+            status:"Regular attend classes",
+         };let std2={
+            status:"Often attend classes",  //for when we need a same function of any object is use for many other objects
+         };                                   // prototype will help ,writing method is 'object.__proto__'
+         let std3={
+            status:"Not Regular attend classes", 
+            criteria(){    //in these we add same method or function in object of we use prototype
+                   console.log("Below 75% attencdance may cause educational loss "); 
+            },
+         };
+         std1.__proto__ =objj; // these is the way to use the function or method of other oblect in perticular object
+         std2.__proto__ =objj; //here we see use of prototype.
+
+         std3.__proto__ =objj; //in thes scenario it consider its own function or method, whenewer same function is use 
+             // it preferance give its own object not that we use external function from other object
+     </script>
+</body>
+</html>

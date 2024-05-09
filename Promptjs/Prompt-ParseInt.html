@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt-ParseInt</title>
+</head>
+<body>
+       <script>
+        function intfun(x,y){
+            let z=x+y;
+            console.log('Prompt-ParseInt'+z);   //prompt value is dynamic which is given by user
+        }
+        let x=parseInt(prompt('enter value x'));   //it not print float value ,ex-value '3.5',but only consider '3' value
+        let y=parseInt(prompt('enter value y'));
+         intfun(x,y);
+       </script>
+</body>
+</html>

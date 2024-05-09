@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async-Await Chaning</title>
+</head>
+<body>
+    <script>
+        let expfun1=((user)=>{
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    console.log("Thes is User Info With Async-Await, the Name Is",user);
+                    resolve("Problem Solve");
+                },2000);
+            });
+        });
+
+        let expfun2=((emailid)=>{
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    console.log(`With Email Id ${emailid}, ...Bas Ho Gaya!`);
+                    resolve("Khattam Bye..Bye, TATA..!")
+                },2000);
+            });
+        });
+
+        let expfun3=async()=>{
+           await expfun1("Person 1");  //these is the async-await chaninig, these way easier than callback hell and Promise Chain
+           await expfun2("p1@email");  //these is easy to understand and maintain
+           await expfun1("Person 2");
+           await expfun2("p2@email");
+
+        }
+        expfun3();
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic of Promise</title>
+</head>
+<body>
+    <script>
+        /* 
+          the promise is bassically for asynchronous actions inssurance for completing or not ,it means it not block the 
+          further code execuation.exp .from fecting a data from server,download any thin on broweswer ,sometimet it takes time
+          so by the 'Promise' it eassy to handle becouse further action is not stop and it give message or alert taht previou 
+          request is fulfilled
+        */
+        document.write("<h3> hello these is Promise </h3>");
+        let firstpromise= new Promise((resolve,reject)=>{  //in promise ther is two parameter resolve or reject
+            setTimeout(()=>{
+                alert('Done');  // it have three atate, pending action, fulfilled,and reject request
+            },3000);            
+        });
+        document.write(firstpromise);  
+        document.write(" <h3> Promise either complete or reject </h3>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>use of this.</title>
+</head>
+<body>
+      <script>
+           let objjj={
+                  movie: '12 th Fail', game: 'GTA IV- voice city', sport:'Cricket',
+                  favourite: function(){
+                   document.write("<h3>", this.game +', '+ this.sport +"  It is my Favourite" ,"</h3>"); 
+                   // in here, we see that 'this.'is use as current value(context) in object
+                  }
+           }
+           objjj.favourite();
+           objjj.sport='Badminton';  //it is replace the sport , and we again call the function
+           objjj.favourite(); //output with new sport.
+
+      </script>
+</body>
+</html>

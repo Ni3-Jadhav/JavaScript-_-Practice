@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Eventlistener</title>
+</head>
+<body>
+    <h1 id="eventlistener"> </h1>
+    <p>This is the example of Eventlistener
+        by clicking on the below button it add an event.
+    </p>
+    <button type="button" id="add event">AddEvent</button>
+      <script>
+        document.getElementById('add event').addEventListener('click',eventtriggered);
+        function eventtriggered(){
+           document.getElementById('eventlistener').innerHTML='The event is added'
+        }
+        // these is exaple of DOM in which we add an event in the runtime 
+      </script>
+</body>
+</html>

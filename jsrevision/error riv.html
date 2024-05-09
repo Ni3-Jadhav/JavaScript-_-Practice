@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+</head>
+<body>
+    <form action="abc.html" method="post">
+        <label>Registration</label>
+        <br>
+        <div id="id1">Error</div>
+        <label>Email id</label>
+        <input type="email" name="aaaa" id="id2">
+        <br>
+        <label>Password</label>
+        <input type="password" name="pppp" id="id3">
+        <br>
+        <button type="submit" name="bbbb" onclick="return goforward()"> go forward</button>
+    </form>
+    <script>
+        function goforward()
+        {
+            var Error=document.getElementById('id1');
+            var aaaa=document.getElementById('id2');
+            var pppp=document.getElementById('id3');
+              if(aaaa.value==''){
+                Error.innerHTML='enter id';
+                return false;
+              }else if(pppp.value==''){
+                Error.innerHTML='enter pass';
+                 return false;
+              }else{
+                return true;
+              }
+        }
+    </script>
+</body>
+</html>

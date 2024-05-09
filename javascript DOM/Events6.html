@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM event 'onkeyup'& 'onkeydown' </title>
+</head>
+<body>
+     <div id="display"></div>
+     <input type="text" id="event6" onkeyup="eventkey()">
+     <input type="text" id="event66" onkeyup="eventkey1()" onkeydown="eventkeydown()">
+    <script>
+         function eventkey(){
+            document.getElementById('display').innerHTML=document.getElementById('event6').value;
+         }
+        //  the 'onkeyup' event is bassically for the action that occurs on real time as user is type 
+        // on keyboard , it is for cheack input data from the servers database.
+        function eventkeydown(){
+            document.getElementById('event66').style.backgroundColor='lightgreen';
+         }    
+         function eventkey1(){
+            document.getElementById('event66').style.backgroundColor='yellow';
+         } 
+        //  in  above we triggerd two events simantaneusly ,in that on the action of pressing any key 
+        //  the 'onkeydown' event is trigger and realeasing key the 'onkeyup'event worked.
+    </script> 
+</body>
+</html>

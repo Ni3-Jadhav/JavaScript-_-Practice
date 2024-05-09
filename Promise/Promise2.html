@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling Promise</title>
+</head>
+<body>
+    <script>
+        document.write("<h3> Error Handling With Promise</h3>");
+        let vlv=66;
+        let firstpromise= new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                if(vlv>=50){
+                    resolve();
+                }else{
+                    reject();
+                };
+            },3000);
+        })
+
+        firstpromise.then(()=>{  //in these we '.then' for the promise is success so next  to take action
+            document.write("Statement is true");
+        }).catch(()=>{      //here ".catch" to handle error
+            document.write("Statement is with error")
+        })
+        document.write("hfsdjvkdm");
+        document.write('furthetr code execaution');
+    </script>
+</body>
+</html>

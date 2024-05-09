@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alertform</title>
+</head>
+<body>
+    <form action="abc.html" method="post">
+        <label>alertform</label>
+        <br>
+        <label>email id</label>
+        <input type="email" name="id1" id="kkk">
+        <br>
+        <label>password</label>
+        <input type="password" name="p1" id="ppp">
+        <br>
+        <button type="submit" name="okkk" onclick="return okkkkk()">ok</button>
+    </form>
+    <script>function okkkkk()
+        {
+            var id1=document.getElementById('kkk').value;
+            var p1=document.getElementById('ppp').value;
+               if(id1==''){
+               alert('enter id')
+                return false;
+               }else if(p1=='')
+               {
+                alert('enter pass') 
+                return false;
+               }else{
+              alert('go forward')
+                return true;
+               }
+        }</script>
+       
+</body>
+</html>

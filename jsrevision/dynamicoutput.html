@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dynamicoutput</title>
+</head>
+<body>
+    <form action="abc.html" method="post">
+        <label>dynamic output in console</label>
+        <br>
+        <label>email id</label>
+        <input type="email" name="aaa" id="a1">
+        <br>
+        <label>passs</label>
+        <input type="password" name="qqq" id="a2">
+        <br>
+        <button type="submit" onclick="return proceed()">proceed</button>
+    </form>
+    <script>
+        function proceed()
+        {
+            var aaa=document.getElementById('a1').value;
+            {
+                console.log(aaa)
+             return false;
+            }
+            var qqq=document.getElementById('a2').value;
+            {
+                console.log(qqq)
+                return false;
+            }
+            {
+            console.log('okkkk')
+            return true;
+            }
+        }
+    </script>
+</body>
+</html>

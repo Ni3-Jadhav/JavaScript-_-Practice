@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementByClassName</title>
+</head>
+<body>
+      <h2 class="name1">getElementByClassName1</h2>
+      <h2 class="name1">getElementByClassName2</h2>
+      <h2 class="name1">getElementByClassName3</h2>    
+      <h2 class="name1">getElementByClassName4</h2>    
+      <h2 class="name1">getElementByClassName5</h2>    
+      <h2 class="name1">getElementByClassName6</h2>    
+      <h2 class="name1">getElementByClassName7</h2>    
+      <h2 class="name1">getElementByClassName8</h2>    
+      <h2 class="name1">getElementByClassName9</h2>    
+        <h1 id="name2"></h1>
+         <button type="button" onclick="countclassname()">count</button>
+    <script>
+         function countclassname(){
+            let cn=document.getElementsByClassName('name1');
+             cn[2].style.color='red';
+             cn[6].style.backgroundColor='green';
+             cn[4].style.visibility= 'hidden';
+             document.getElementById('name2').innerHTML='Total no of class name is '+cn.length;
+         }
+    </script>     
+</body>
+</html>

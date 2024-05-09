@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM events3 'onfocus' </title>
+</head>
+
+<body>
+    <!-- <h1 id="onf" onfocus="focusevnt()">onfocus</h1> -->
+    <input type="text" id="events3" onfocus="focusevnt1()">
+    <script>
+        function focusevnt1(){
+            document.getElementById('events3').style.backgroundColor='lightpink';
+        }
+        // function focusevnt(){
+        //     document.getElementById('onf').style.color='red';
+        // }
+        // onfocus is also work like onclick but event trigerred with focus or navigation with keyboard.
+        // it is basicaly use with <input> <a> <select>. 
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack Hell or Nested </title>
+</head>
+
+<body>
+    <script>
+        let fun1 = ((username, nextuser) => {  //these is the nesting of call back or it also called CallBack Hell
+            setTimeout(() => {  //we can put differnt function in the nesting argument
+                console.log("These is the Details of", username);
+                nextuser()
+
+            }, 2000);
+        });
+        fun1("Roman Reigns", () => {  //the code is like pyramid style , and it some time dificul to maintain and understand
+            fun1("Seth Rollins", () => {
+                fun1("Dean Ambrose", () => { // in complecated real life project it may more weird to see,that's why 
+                    console.log("These is CallBack Hell"); //it is "CallBack Hell"
+                    //here we also put empty function as it is no need of any  things  to put,like console.log, 
+                    //but empty in function argument ,it give function not defined error
+                });
+            });
+        });
+
+        // same exaple with if
+
+        let fun2 = ((userN, nextuserN) => {
+            setTimeout(() => {
+                console.log('These is the Player Name', userN);
+                if (nextuserN) {
+                    nextuserN();
+                }
+            }, 1000);
+        });
+
+
+        let fun3 = ((userId, nextuserId) => {
+            setTimeout(() => {
+                console.log("With the Id:", userId);
+                if (nextuserId) {
+                    nextuserId(); //we use if ststement so no need of putting empty function in argument of last nesting function 
+                }
+            }, 2000)
+        });
+
+        fun2("Virat", () => {
+            fun3("VK18", () => {
+                fun2("Rohit", () => {
+                    fun3("45", () => {
+                        fun2("Jasprit", () => {
+                            fun3("93");
+                        });
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

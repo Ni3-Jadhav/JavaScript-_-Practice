@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM events 'unload'</title>
+</head>
+<body onunload="eventunload()">
+   <blockquote>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates iusto, iure, 
+    laudantium magni voluptas nemo corrupti excepturi sapiente 
+    sunt praesentium rerum rem itaque. Maxime hic sequi fugiat sed voluptatem quia!
+</blockquote> 
+   <script>
+    function eventunload(){
+        alert('event unload');
+    }
+    // this is event works on we move another page, it use with '<body>' tag. the working is depends on browser.
+   </script>
+</body>
+
+
+</html>

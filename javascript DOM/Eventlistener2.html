@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Add Multiple Eventlistener</title>
+</head>
+
+<body>
+    <h2 id="mel1"></h2>
+    <button id="mel2" type="button">click</button>
+      <script>
+        document.getElementById('mel2').addEventListener('click',eventlistener11);
+        document.getElementById('mel2').addEventListener('mouseover',eventlistener1);
+
+        function eventlistener1(){
+            document.getElementById('mel1').innerHTML='Eventlistener is added';
+        }
+        function eventlistener11(){
+            document.getElementById('mel1').innerHTML='Multiple Eventlistener is added';
+        } 
+        // multiple events are aplied on single element by the using of eventlistener
+      </script>
+</body>
+</html>

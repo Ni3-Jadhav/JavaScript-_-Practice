@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this use in object</title>
+</head>
+<body>
+      <script>
+           let objjj={
+                  movie: '12 th Fail', game: 'GTA IV- voice city', sport:'Cricket',
+                  favourite: function(){
+                   document.write("<h3>", this.sport +"  It is my Favourite" ,"</h3>"); 
+                   document.write('<h4> use of this in object ,it give the output like-, also check console </h4>',this );
+                   // in above scenario it write only 'object' word but in below.
+                   console.log(this); //it give the all value in object
+                  }
+           }
+            objjj.favourite();
+            objjj.game='Mini-Militia';  //it give another value of object in 'objjj'
+            objjj.movie='Animal';
+            console.log(this);  //here, it gives the window object, becouse it make globle now
+            
+      </script>
+</body>
+</html>

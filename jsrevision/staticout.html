@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>staticoutput</title>
+</head>
+<body>
+    <form action="abc.html" method="post">
+        <label>static output in console</label>
+        <br>
+        <label>email id</label>
+        <input type="email" name="sss" id="mmm">
+        <br>
+        <label>password</label>
+        <input type="password" name="ppp" id="nnn">
+        <br>
+        <button type="submit" onclick="return register()">ok</button>
+    </form>
+    <script>
+        function register()
+        {
+            var sss=document.getElementById('mmm').value;
+            var ppp=document.getElementById('nnn').value;
+            if(sss==''){
+               console.log('enter id')
+               return false;
+            }else if(ppp==''){
+                console.log('enter pass')
+                return false;
+            }else { console.log('go forword')
+            return true;
+        }
+        }
+
+    </script>
+</body>
+</html>

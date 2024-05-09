@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM evetns 5 'onmouseover','onmouseout' </title>
+</head>
+<body>
+    <h2 id="event5" onmouseover="eventmouseover()" onmouseout="eventmouseout()"> 
+        The Event is trigerred when mouse is over this</h2>
+      <script>
+        function eventmouseover(){
+            document.getElementById('event5').style.color='red';
+        }
+        function eventmouseout(){
+            document.getElementById('event5').style.color='black';
+        }
+        //  the event 'onmouseover' and 'onmouseout' is likely same as 'onfocus' and 'onblur'
+        //  but it is different ,it only moving mouse not click on content .
+      </script>
+</body>
+
+</html>

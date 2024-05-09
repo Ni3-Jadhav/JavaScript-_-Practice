@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear Time Out</title>
+</head>
+
+<body>
+    <script>
+        let expfun1 = setTimeout(() => {
+            console.log("These is for the cLear Timeout 1");  //these not execauted because of clear timeout
+            console.log("The set Timeout 1 will not execaute");
+        }, 2000);
+
+
+
+        let expfun2 = setTimeout(() => { //these is execauted
+            console.log("These is for the cLear Timeout 2");
+            console.log("The set Timeout 2 will not execaute");
+        }, 2000);
+
+
+        clearTimeout(expfun1); //for clear the time out of expfun1
+
+
+        let expfun3 = (() => console.log("Wlcome in setTimeout"));  //exp. for functions
+        let exp = setTimeout(expfun3, 4000)  //we put function in settimeout
+        clearTimeout(exp); //we clear a timeout so now function not execaute
+
+
+        //cleartimeout with conditions
+
+
+
+    </script>
+</body>
+
+</html>

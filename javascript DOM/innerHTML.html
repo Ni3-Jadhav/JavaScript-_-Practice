@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM innerHTML</title>
+</head>
+<body>
+    <h4 id="first name"> name 1</h4>
+    <span id="second name">name 2</span>
+    <br>
+    <button onclick="namechange()" name="change name">change</button>
+    <button onclick="colorchange()" name="change color">bgcolor</button>
+      <script>
+         var namechange4523=document.getElementById('first name');
+         function namechange(){
+            
+            // here in above we use 'first name id' as the 'var' is use for multiple use
+            namechange4523.innerHTML='name33';
+            document.getElementById('second name').innerHTML='name4';    
+         }
+         function colorchange(){
+            namechange4523.style.color='red';
+            namechange4523.style.backgroundColor='lightgreen';
+            // in second name id we not use 'var' so we write whole line as below we see.
+            document.getElementById('second name').style.backgroundColor='skyblue';
+         }
+      </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: flex;
+        justify-content:center;
+        background-size: 100% 100%;
+    }
+    .slider-container{
+        position: relative;
+    }
+    .slider-container .next{
+        position: absolute;
+        top: 150px;
+        right:50px;
+        height: 50px;
+        width: 150px ;
+        border-radius: 5px;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    .slider-container .previous{
+        position: absolute;
+        top: 150px;
+        left:50px;
+        height: 50px;
+        width: 150px ;
+        border-radius: 5px;
+        background-color: transparent;
+        cursor: pointer;
+    }
+</style>
+<body>
+   
+    <div class="container">
+        <div class="slider-container">
+            <button class="previous" onclick="movePrevious()">Previous</button>
+            <img id="images" width="100%" onmouseover="continueshow()">
+            <button class="next" onclick="moveNext()">Next</button>
+        </div>
+    </div>
+    <script src="img-slide-btn-js.js"></script>
+</body>
+</html>

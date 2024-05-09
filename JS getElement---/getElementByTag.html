@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementByTagName</title>
+</head>
+<body>
+     <p>This is Paragraph No 1</p>
+     <p>This is Paragraph No 2</p>
+     <p>This is Paragraph No 3</p>
+     <p>This is Paragraph No 4</p>
+     <p>This is Paragraph No 5</p>
+     <p>This is Paragraph No 6</p>
+     <p>This is Paragraph No 7 </p>
+     <p></p>
+        <button id="tagname" type="button" onclick="paragraph()">count</button>
+    <script>
+        function paragraph(){
+            let p=document.getElementsByTagName('p');
+            p[3].style.color='red';
+            p[7].style.color='green';
+            p[5].style.display='none';
+            p[7].innerHTML='Total no of paragraph is '+p.length;
+            alert('Total Paragraph are counted');
+        }
+    </script>    
+</body>
+</html>

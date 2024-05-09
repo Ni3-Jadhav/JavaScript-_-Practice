@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous</title>
+</head>
+<body>
+    <h2>Asynchronous In JavaScript</h2>
+    <script>
+          /*
+            Asynchronous code allows operations to be executed independently of the main program flow.
+            It doesn't wait for an operation to finish before moving on to the next one.
+           */
+                 document.write("<h3> Hello");
+                 document.write('<h3> EveryOne');
+                    setTimeout(()=>{
+                      document.write("<h4> In Asychronous all action procceding at sametime. </h4>")
+                    },2000);
+                 document.write("<h3> These may </h3>");
+                 document.write("<h3> Display After </h3>");
+                 document.write("<h3> SomeTime </h3>");
+                    
+           /*
+        Asynchronous code is commonly used in scenarios like making network requests, reading/writing files,
+         handling events, and other tasks that might take some time to complete. It helps 
+        improve the responsiveness and efficiency of applications by allowing them to perform multiple tasks concurrently.
+        */
+    </script>
+</body>
+</html>

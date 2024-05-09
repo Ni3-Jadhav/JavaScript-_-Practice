@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance in Classes</title>
+</head>
+<body>
+     <script>
+        // Extends- Inheritance it bassically passing the properties and method or function from parent class to child class
+        // the use of extends is becouse sometimes we create a multiple class with multiple properties and methods,
+        //but all of them contains some no of similar properties and functions .by using extends we give class of similar proerties
+        //and method, which is parent class it give to child class and child class have there own properties and method
+        class Sport{
+            need(){   // here we create a class of parent
+                console.log('For delvlopement of our body we need participate in sport');
+            };
+            advantage(){
+                console.log ('sport also Make Mentally strong to any person');
+            }
+        };
+        class athletes extends Sport{  //for inheritance the extends key word is using ,child class have there own propertice
+            discipline(){   // method of writing - "child class extends parent class".
+                console.log(' athletes are very disciplined and hard working ');
+            }
+        };
+           
+        class student extends Sport{
+            discipline(){   // multiple child class are extends with parent class
+                console.log(" Sport give a dicipline to student");
+            };
+        };
+         class normalperson extends Sport{
+              need(){    //in these we give same method of parent class in child
+                console.log("Frequently do any sport, make stressfree life");
+              };
+         };
+
+           let person1= new athletes();
+           let person2 = new student();
+           let person3= new normalperson();  //in these scenario it takes its own method or function ,not take parent class method
+     </script>
+</body>
+</html>
