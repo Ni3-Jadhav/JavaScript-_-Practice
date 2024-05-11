@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Empty Html</title>
+</head>
+<style>
+    body{
+        padding: auto;
+        background-color: gray;
+        color: rgb(97, 17, 3);
+    }
+</style>
+<body>
+    <!-- this is empty html body it get htmal element by dom -->
+</body>
+<script>
+        const div = document.createElement('div');  /* it create new html element */
+        div.className = "div-name"; /* for give attribute*/
+        div.id = "div-id"; 
+
+        div.setAttribute("class","div-class") ; /* This is the best way for set an attribute ,it overight previous one*/
+
+        div.style.backgroundColor="lightblue";
+
+        // div.innerHTML= "This line Output From innerHTML";
+         /* this  above line not show in html body only in console  for  html body use document.createTextNode("")*/
+                                                       
+         
+        const divTxt = document.createTextNode("This line Output From 'document.createTextNode'.");
+        /* use document.createTextNode('') for element show in html body*/
+        div.appendChild(divTxt); /* appendchild for add new node*/
+        document.body.appendChild(div);
+</script>
+</html>
