@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Parent-Child</title>
+</head>
+<style>
+    .parent{
+        background-color:  rgb(65, 59, 59);
+        color: beige;
+        padding: 20px;
+    }
+</style>
+<body>
+    <div class="parent">
+        <div class="child">Child no 1</div>
+        <div class="child">Child no 2</div>
+        <div class="child">Child no 3</div>
+        <div class="child">Child no 4</div>
+        <div class="child">Child no 5</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent');
+
+    console.log(parent);  /* it give all child element as html*/
+    console.log(parent.children);  /* It Gives htmal collection of child like array*/
+    console.log(parent.children[1].innerHTML); /* it give html  text of that child*/
+
+    for(let i =1;i< parent.children.length-1;i++){  /* Dom with for loop*/
+        parent.children[i].style.color="red";
+    };
+
+    console.log(parent.firstElementChild.style.color= "green");  /* This for first Element of parent*/
+    parent.lastElementChild.style.backgroundColor="green";  /* it give last*/
+
+
+    console.log(parent.childNodes);  /* it gives a length or no of attributes in parent element , in this it give no
+                                        of child elements and its details */
+</script>
+</html>
