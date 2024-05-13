@@ -34,8 +34,20 @@
     const fun2 = (ItemName)=>{
         const li = document.createElement('li');
         li.appendChild(document.createTextNode(ItemName));
+        // it is very optimise way of coding
         document.querySelector('.list').appendChild(li);
     }
-    fun2("Item Four")
+    fun2("Item Four");
+
+
+    // Edit Element with textcontent and replace method
+    const itemTwo = document.querySelector("li:nth-child(2)");
+    const newli = document.createElement("li");
+    newli.textContent ="Item Two Edit";
+    itemTwo.replaceWith(newli);
+
+    // anothor method
+    const itemThree =document.querySelector("li:nth-child(3)");
+    itemThree.outerHTML = "<li>Third Item Edit </li>"
 </script>
 </html>
