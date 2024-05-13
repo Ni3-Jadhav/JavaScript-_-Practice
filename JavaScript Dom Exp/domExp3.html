@@ -18,12 +18,24 @@
     </ul>
 </body>
 <script>
-    // simple method for add new element with appendchild
+    // simple method for add new element with appendchild,this is not prper work in large projects
     const fun1 =(ItemName)=>{
         const li =document.createElement('li');
         li.innerHTML = `${ItemName}`;
         document.querySelector('.list').appendChild(li);
     }
-    fun1("Item Two")
+    fun1("Item Two");
+    fun1("Item Three");
+
+
+    /* another way for add new element ,it used most time,it work same as above but it not travel whole html tree only 
+      at the element point */
+
+    const fun2 = (ItemName)=>{
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(ItemName));
+        document.querySelector('.list').appendChild(li);
+    }
+    fun2("Item Four")
 </script>
 </html>
