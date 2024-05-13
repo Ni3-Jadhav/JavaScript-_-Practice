@@ -48,6 +48,11 @@
 
     // anothor method
     const itemThree =document.querySelector("li:nth-child(3)");
-    itemThree.outerHTML = "<li>Third Item Edit </li>"
+    itemThree.outerHTML = "<li>Third Item Edit </li>";
+
+
+    // Remove Element
+    const lastItem = document.querySelector("li:last-child");
+    lastItem.remove(); /* it is simple way for remove or delete elemnt*/
 </script>
 </html>
