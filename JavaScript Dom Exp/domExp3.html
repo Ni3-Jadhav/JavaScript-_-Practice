@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Add, Edit and Remove Element</title>
+</head>
+<style>
+    body{
+        padding: auto;
+        background-color: gray;
+        color: #fff;
+    }
+</style>
+<body>
+    <ul class="list">
+        <li>Item one</li>
+    </ul>
+</body>
+<script>
+    // simple method for add new element with appendchild
+    const fun1 =(ItemName)=>{
+        const li =document.createElement('li');
+        li.innerHTML = `${ItemName}`;
+        document.querySelector('.list').appendChild(li);
+    }
+    fun1("Item Two")
+</script>
+</html>
