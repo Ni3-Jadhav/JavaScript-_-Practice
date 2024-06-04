@@ -13,10 +13,10 @@
              the callback function ,is the function in which we pass a parameter and call some other function in it,
              or we also  new create function in function.
         */
-        function info(name) {
+       const info=(name)=> {
             console.log("These is the detail of", name);
         };
-        function more(email) {          //these the simple example og call back function
+       const more=(email)=> {          //these the simple example og call back function
             console.log("with Eamil Id:", email);
         };
         more("OG@gmail.com", info("Oggy"))

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Chain Error Handling</title>
+</head>
+
+<body>
+    <script>
+        let shopping = ["Clothes", "Grocery", "Shoes", "Books"]; // suppose these data are from API
+
+        let ShoppingItems = (items) => {
+            return items && items.length > 0;
+        };
+        let shopingPay = () => false;
+        let shopingItemsId = shopping[0]; // let's assume we have a valid index
+
+        let expfun1 = ((shopping) => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    if (!ShoppingItems(shopping)) { // checking if the received data is valid
+                        let errrr = new Error("List of Shopping Items is empty or not valid");
+                        reject(errrr);
+                    } else if (!shopingItemsId) {
+                        let errrr = new Error("Selected product is not valid");
+                        reject(errrr);
+                    } else {
+                        resolve(`Your Selected Product is: ${shopingItemsId}...`);
+                    }
+                }, 2000);
+            });
+        });
+
+        let expfun2 = (() => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+
+                    if (!shopingPay()) {
+                        let err = new Error("Something Went Wrong in Payment Process");
+                        reject(err);
+                    } else {
+                        resolve("Proceed To Payment");
+                    }
+                }, 2000);
+            });
+        });
+
+        expfun1(shopping)
+            .then((message) => {
+                console.log(message);
+                return expfun2(); // proceed to payment
+            })
+            .then((payInfo) => {
+                console.log(payInfo);
+            })
+            .catch((err) => {
+                console.log(err.message);
+            })
+            .finally(() => {
+                console.log("Thank You...!");
+            });
+    </script>
+</body>
+
+</html>
